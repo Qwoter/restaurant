@@ -1,0 +1,13 @@
+development: &default
+  adapter: mysql2
+  database: restaurant_development
+  encoding: utf8
+  min_messages: warning
+  pool: 5
+  timeout: 5000
+  username: root
+  password: 1
+
+test:
+  <<: *default
+  database: restaurant_test
