@@ -7,4 +7,7 @@ class CalendarController < ApplicationController
 
     @tables_reservation = Table.get_tables_for_calendar(selected_day)
   end
+
+  def root
+  end
 end
