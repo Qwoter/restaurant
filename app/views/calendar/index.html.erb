@@ -1,0 +1,9 @@
+<h3><%= format_date(@day, @month, @year) %></h3>
+
+<% @tables_reservation.each do |table| %>
+	Table #<%= table[0] %>
+	<p><%= show_tables_timeline(table[1]) %></p>
+<% end %>
+
+<%= link_to_previous_day(@day, @month, @year) %>
+<%= link_to_next_day(@day, @month, @year) %>
