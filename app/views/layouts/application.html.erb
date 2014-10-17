@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div>
+    <h3><%= link_to("Calendar", calendar_path) %></h3>
+    <h3><%= link_to("Tables", tables_path) %></h3>
+    <h3><%= link_to("Reservations", reservations_path) %></h3>
+  </div>
 <%= yield %>
 
 </body>

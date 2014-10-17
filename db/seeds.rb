@@ -10,4 +10,5 @@ tables = Table.create(tables_data)
 
 reservations_data = (3..6).map {|i| { table_id: 1, start_time: Time.now + (i * 2).hours, end_time: Time.now + (i * 2 + 1).hours }}
 reservations_data += (1..3).map {|i| { table_id: 2, start_time: Time.now + (i * 3).hours, end_time: Time.now + (i * 3 + 2).hours }}
+reservations_data += (1..5).map {|i| { table_id: 3, start_time: Time.now + (i).hours, end_time: Time.now + (i+ 1).hours }}
 reservations = Reservation.create(reservations_data)

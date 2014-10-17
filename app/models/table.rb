@@ -1,5 +1,5 @@
 class Table < ActiveRecord::Base
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
   validates :number, presence: true
 
   def self.get_tables_for_calendar(selected_day)

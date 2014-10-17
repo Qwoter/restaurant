@@ -8,14 +8,14 @@ module CalendarHelper
 
     reservations.each do |r|
       if r[1] - r[0] == 1
-        result[r[0]] = "[#{result[r[0]]}]"
+        result[r[0]] = "<span class='red'>[#{result[r[0]]}]</span>"
       else
-        result[r[0]] = "[#{result[r[0]]}"
-        result[r[1] - 1] = "#{result[r[1] - 1]}]"
+        result[r[0]] = "<span class='red'>[#{result[r[0]]}"
+        result[r[1] - 1] = "#{result[r[1] - 1]}]</span>"
       end
     end
 
-    result * " "
+    (result * " ").html_safe
   end
 
   def link_to_next_day(day, month, year)
